@@ -1,0 +1,31 @@
+# Routing main file         
+# NAME OF FLOW DIRECTION FILE         
+../../RoutingSetup3S/flowdirection3S.txt         
+# NAME OF VELOCITY FILE         
+.false.         
+3.965797 
+# NAME OF DIFF FILE         
+.false.         
+656.924385 
+# NAME OF XMASK FILE         
+.false.         
+12500         
+# NAME OF FRACTION FILE         
+.false.         
+1.0         
+# NAME OF STATION FILE         
+../../RoutingSetup3S/stations3S.txt         
+# PATH OF INPUT FILES AND PRECISION         
+../../RoutingSetup3S/Input2000/fluxes_         
+4         
+# PATH OF OUTPUT FILES         
+../../RoutingSetup3S/Results8/         
+# RESERVOIR LOCATION         
+../../RoutingSetup3S/reservoirlocation3S.txt
+# RESERVOIR PARAMETERS         
+../../ReservoirsOriginal/
+# YEAR AND MONTH OF MODEL OUTPUT TO ROUTE & ROUTED OUTPUT TO WRITE         
+2000 1 2022 12      
+2000 1 2022 12         
+# NAME OF UNIT HYDROGRAPH FILE         
+../SourceCode/UH.all         
