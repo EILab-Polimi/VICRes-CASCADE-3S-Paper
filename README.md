@@ -48,24 +48,23 @@ Each of these settings requires running a separate optimization process.
 Upon completion, the Pareto-optimal solutions are saved in the file optimization_objectives.txt in VICRes/RoutingSetup3S_Opt/Results. This file contains the values for each of the three objectives considered for all Pareto-optimal solutions.
 
 ### VICRes_CASCADE_3S_Transboundary
-intro di cosa fa questa cartella
+The VICRES_CASCADE_3S_Transboundary folder contains the code to execute the assessment of transboundary trade-offs of the generated Pareto frontiers and to reproduce the results described in the sections 'Transboundary energy trade-offs from flushing and sluicing strategies'.
+Lo script RunOptimalSolution.py run tutte le soluzioni pareto efficienti ottenute dallo step di ottimizzazione e salva i risultati completi: non solo il valore degli obiettivi considerati nell'ottimizzazione, ma tutti i risultati che si ottengono normalmente da VICRes. Ogni simulazione salverà il risultato nella cartella VICRes_CASCADE_3S_Transboundary/VICRes/RoutingSetupCores/RoutingSetup3S33{n}/Results, where n is the ID of the pareto optimal solution considered (001, 002, 003 ... up to N, with N total number of pareto optimal solution found).
+Da questi risultati, poi lo script contenuto Figure6.py in Figure/figure6, ricalcola gli obiettivi ma considerando stato per stato e ottiene i risultati e la figura presentati nel capitolo 'Transboundary energy trade-offs from flushing and sluicing strategies'.
 #### Steps to Execute the Model
 ##### 1. Compile VICRes:
-ipse dixim
+Also in this case, VICRes needs to be compiled. Follow the instructions on the official VICRes repository: [Critical-Infrastructure-Systems-Lab/VICRes](https://github.com/Critical-Infrastructure-Systems-Lab/VICRes). We use the slightly modified version of VICRes presented in VICRes_CASCADE_3S_Opt. 
 ##### 2. Locate Input Data:
-ipse dixim
+Before running the model, just make sure that the input data you downloaded for the optimization step, are also included in this folder. Particularly, you should placed the Input_2008_2022 folder in VICRes_CASCADE_3S_Transboundary/VICRes.
 ##### 3. Run the Model:
-ipse dixim...
 Navigate to the VICRes/RoutingOpt/OptCalib directory and execute:
 ```bash
-python optimization.py
+python RunOptimalSolution.py
 ```
-To optimize only the parameters governing the water rule curve, modify line 422 in optimization.py inserting 'os.chdir('../ReservoirsOptWater')'.
-Similarly, to optimize parameters for both the water rule curve and sediment flushing, modify the line to 'os.chdir('../ReservoirsOptFlush')'.
-For optimizing parameters for the water rule curve and sediment sluicing, modify the line to 'os.chdir('../ReservoirsOptSluic')'.
-Each of these settings requires running a separate optimization process.
+To replecate the results presented in the paper, you need to run this command twice. The first one for the flushing Pareto frontier, assuring that at line 217 you have os.chdir('../../ReservoirsCompromizeFlushing'), and at lines 275 and 276 you have filename = 'optimization_objectives_flush.txt' and filename1 = 'optimization_variables_flush.txt' respectively.
+The second one for the sluicing Pareto forntier requires you to modify these three lines of code, inserting os.chdir('../../ReservoirsCompromizeFlushing'), filename = 'optimization_objectives_sluicing.txt' and filename1 = 'optimization_variables_sluicing.txt' at lines 217, 275 and 276 rispectively.
 
-Upon completion, the Pareto-optimal solutions are saved in the file optimization_objectives.txt in VICRes/RoutingSetup3S_Opt/Results. This file contains the values for each of the three objectives considered for all Pareto-optimal solutions.
+Upon completion, the complete results of each Pareto-optimal solutions are saved nella cartella VICRes_CASCADE_3S_Transboundary/VICRes/RoutingSetupCores/RoutingSetup3S33{n}/Results, where n is the ID of the pareto optimal solution considered (001, 002, 003 ... up to N, with N total number of pareto optimal solution found).
 
 ### Figures
 The Figures folder contains all the scripts needed to reproduce the figures presented in the paper "Powering Rivers Sustainably: Integrating Sediment Management and Dam Operations into Hydropower Planning". Each figure script is located in its respective folder (Figure1, Figure2, ..., Figure5) and relies on the results of simulations and optimizations found in the preceding folders (VICRes_CASCADE_3S and VICRES_CASCADE_3S_Opt).
