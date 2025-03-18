@@ -23,7 +23,7 @@
 # RESERVOIR LOCATION         
 ../../RoutingSetupCores/RoutingSetup3S33001/reservoirlocation3S.txt
 # RESERVOIR PARAMETERS         
-../../ReservoirsCores/ReservoirsOpt33001/
+../../ReservoirsOriginal/
 # YEAR AND MONTH OF MODEL OUTPUT TO ROUTE & ROUTED OUTPUT TO WRITE         
 2008 1 2022 12      
 2008 1 2022 12         

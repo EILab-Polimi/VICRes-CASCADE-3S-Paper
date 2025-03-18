@@ -3,7 +3,7 @@
 5479	# Maximum number of simulation days (N)
 0	# Number of days for the spinning period
 200000	# Number of function evaluations (200000 in our final experiments)
-150	# Population size
+150	# 150 Population size
 25	# Number of computer cores
 # Objective functions (1 - consider; 0 - not consider)
 # [Daily water deficit] [Daily hydropower] [Firm hydropower] [Peak flow] [Above predefined flood threshold] [Deviation from pre-defined water leve][Sediment Loads]

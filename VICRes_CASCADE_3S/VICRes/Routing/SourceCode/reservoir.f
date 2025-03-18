@@ -836,7 +836,7 @@ c                  PRINT*,W, J, NAMERS5(W,RESORDER(W,J))
              ENDDO
              CLOSE(98)
             DO N = 1,NO_STAS(W)
-C                print*, 'Working on reservoir no...',RES_DIRECT(N,1,W)
+                print*, 'Working on reservoir no...',RES_DIRECT(N,1,W)
                 CALL MAKE_CONVOLUTION
      &              (RPATH,RESER,NCOL, NROW, NO_OF_BOX(:,W), PMAX, DAYS,
      &              CATCHIJ(:,:,:,W), BASE(:,W), RUNO(:,W), FLOW(:,W), KE, UH_SS, UH_DAY, FRACTION,

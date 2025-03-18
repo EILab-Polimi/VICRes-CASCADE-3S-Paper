@@ -286,7 +286,7 @@ def viccall(vars):
     #hydrofirm=1-hydrofirm/30/totalinstallcapcity*1000          # normalize the value smallest montlhy value of the firm hydropower
     hydrofirm = 1 - hydrofirm/32070.5731
     #totalproduction = 1 - totalproduction/totalinstallcapcity *1000/countrow
-    totalproduction = 1 - totalproduction/8627501.0955
+    totalproduction = 1 - totalproduction/10627501.095537942
     # - Calculate water deficit for the whole system
     countrow2 = 0
     # for i in range(spinning_period,countrow):
