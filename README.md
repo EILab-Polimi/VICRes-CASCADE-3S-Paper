@@ -1,5 +1,5 @@
 # VICRes-CASCADE-3S
-This repository contains all the necessary information and code to run the integrated VICRes-CASCADE framework on the 3S Basin and replicate the results presented in "Powering Rivers Sustainably: Integrating Sediment Management and Dam Operations into Hydropower Planning".
+This repository contains all the necessary information and code to run the integrated VICRes-CASCADE framework on the 3S Basin and replicate the results presented in "Powering Rivers Sustainably: Integrating Sediment Management and Dam Operations into Hydropower Development".
 ## Repository Structure
 ### VICRes_CASCADE_3S
 The VICRes_CASCADE_3S folder contains the code to execute the integrated VICRes-CASCADE framework and reproduce the results described in the section 'Cumulative dam impacts on 3S sediment flow'.
