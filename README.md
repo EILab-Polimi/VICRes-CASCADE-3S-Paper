@@ -1,5 +1,14 @@
 # VICRes-CASCADE-3S
 This repository contains all the necessary information and code to run the integrated VICRes-CASCADE framework on the 3S Basin and replicate the results presented in "Powering Rivers Sustainably: Integrating Sediment Management and Dam Operations into Hydropower Development".
+
+Both VIC and VIC-Res were developed for Linux/Unix platforms and they require the GNU and G77 compilers. D-CASCADE was implemented in Python 3.8.10.
+
+All experiments were conducted in the following environment:
+  Operating System: Ubuntu 20.04.3 LTS
+  CPU: Intel(R) Xeon(R) E5-2687W v4 @ 3.00GHz, 48 threads
+  RAM: 252 GB
+On this setup, running the hard-coupled models over the 3S river basin takes approximately 4 hours.
+Each optimization step, parallelized over 25 cores, took around 3 weeks to complete.
 ## Repository Structure
 ### VICRes_CASCADE_3S
 The VICRes_CASCADE_3S folder contains the code to execute the integrated VICRes-CASCADE framework and reproduce the results described in the section 'Cumulative dam impacts on 3S sediment flow'.
